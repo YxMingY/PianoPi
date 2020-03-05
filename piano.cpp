@@ -13,7 +13,7 @@ void bell(int pin,int freq,int time=500)
 	digitalWrite(pin,LOW);
 	//A half note's microsecond time
 	time = (int)(1000000*time/1000.0/2);
-	//Each half waves' microsecond time 
+	//Each half wave's microsecond time 
 	delay_t = 1000000/freq/2;
 	//How many waves in total??
 	freq = time/(double)delay_t;
