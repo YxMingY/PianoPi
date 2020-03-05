@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 /**
+ * To let the bell ring
  * @param int freq - frequency
  * @param int time - unit:millisecond
  * $param int pin
@@ -31,10 +32,18 @@ void Piano::setPin(int pin)
 {
 	m_pin = pin;
 }
+/**
+ * To set quarter note's time
+ * @param int ms - unit:millisecond
+ */
 void Piano::setD4Time(int ms)
 {
 	m_time = ms;
 }
+/**
+ * @param int note - enum note(which tone)
+ * @param int note_t - enum nute_t(the time which the note continues)
+ */
 Piano Piano::play(int note,int note_t) const
 {
 	bell(m_pin,note,m_time*4/note_t);
